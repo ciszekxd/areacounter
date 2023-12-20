@@ -1,11 +1,10 @@
 package com.mobile.areacounter.geometry
 
 import kotlin.math.acos
-import kotlin.math.cosh
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-class GeometryCounter {
+object GeometryHelper {
     fun calculateAngle(firstVector: Vector, secondVector: Vector) : Double {
         val firstVectorCommonStart = Point(
             firstVector.finishingPoint.x - firstVector.startingPoint.x,

@@ -1,6 +1,6 @@
 package com.mobile.areacounter
 
-import com.mobile.areacounter.geometry.GeometryCounter
+import com.mobile.areacounter.geometry.GeometryHelper
 import com.mobile.areacounter.geometry.Point
 import com.mobile.areacounter.geometry.Vector
 import org.assertj.core.api.Assertions
@@ -15,9 +15,9 @@ import java.util.stream.Stream
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class GeometryCounterTest {
+class GeometryHelperTest {
 
-    val undertest = GeometryCounter()
+    val undertest = GeometryHelper()
 
     companion object {
         @JvmStatic
