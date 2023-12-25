@@ -15,4 +15,22 @@ class Triangle(val pointA : Point, val pointB : Point, val pointC : Point) {
     private fun calcVector(p1 : Point, p2 : Point, p3 : Point) : Double{
         return (p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y)
     }
+
+    override fun equals(other: Any?): Boolean {
+        other?.let {
+            if (it is Triangle){
+                return setOf(it.pointA, it.pointB, it.pointC) == setOf(pointA, pointB, pointC)
+            }
+        }
+
+        return super.equals(other)
+    }
+
+    override fun hashCode(): Int {
+        return setOf(pointA, pointB, pointC).hashCode()
+    }
+
+    override fun toString(): String {
+        return setOf(pointA, pointB, pointC).toString()
+    }
 }
